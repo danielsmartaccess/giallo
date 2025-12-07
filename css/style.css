@@ -1,0 +1,616 @@
+/*
+ * Estilos para o site da Giallo Sanduicheria
+ * Inspirado pela estética italiana e pelo cardápio do restaurante.
+ */
+
+/* Importação de fontes modernas via Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&family=Manrope:wght@300;400;600;700&display=swap');
+
+:root {
+  --color-primary: #FFCC00; /* amarelo vibrante inspirado na marca Giallo */
+  --color-secondary: #333333; /* preto/cinza escuro para contraste */
+  --color-background: #FAF8F0; /* tom de off‑white para base suave */
+  --color-accent: #8B4513; /* marrom suave lembrando pão tostado */
+  --color-light: #FFFFFF;
+  --font-base: 'Manrope', sans-serif;
+  --font-heading: 'Plus Jakarta Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-base);
+  background-color: var(--color-background);
+  color: var(--color-secondary);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.site-header {
+  background-color: var(--color-light);
+  border-bottom: 2px solid var(--color-primary);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--color-secondary);
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 0.5rem;
+}
+
+.main-nav a {
+  margin-left: 1.5rem;
+  font-weight: 600;
+  position: relative;
+}
+
+.main-nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-primary);
+  transition: width 0.3s;
+}
+
+.main-nav a:hover::after,
+.main-nav a:focus::after {
+  width: 100%;
+}
+
+/* Hero section */
+/* Bloco hero com gradiente para reforçar a identidade visual logo no início */
+.hero-section {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #FFDE59 100%);
+  color: var(--color-secondary);
+  text-align: center;
+  padding: 4rem 0 5rem;
+}
+
+.hero-section h1 {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-section p {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--color-secondary);
+  color: var(--color-light);
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover,
+.cta-button:focus {
+  background-color: var(--color-accent);
+}
+
+/* Menu section */
+.menu-section {
+  padding: 3rem 0;
+}
+
+.menu-section h2 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 0.25rem;
+}
+
+.menu-section .subtitle {
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 2rem;
+  color: var(--color-accent);
+}
+
+/* Campo de busca reutilizável acima dos filtros */
+#search {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 0 auto 2rem;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--color-primary);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* Cartão que agrupa copy + status + chips */
+.ingredient-filter {
+  background: linear-gradient(135deg, rgba(255, 204, 0, 0.12), rgba(255, 255, 255, 0.7));
+  border: 1px solid rgba(255, 204, 0, 0.4);
+  border-radius: 16px;
+  padding: 1.25rem;
+  margin: 0 auto 1.75rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.ingredient-filter .filter-copy h3 {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  margin-bottom: 0.35rem;
+}
+
+.ingredient-filter .filter-copy p {
+  color: rgba(51, 51, 51, 0.85);
+}
+
+/* Linha informativa: contador de ingredientes + botão limpar */
+.filter-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(255, 204, 0, 0.35);
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.55);
+}
+
+.filter-status small {
+  display: block;
+  margin-top: 0.15rem;
+  color: rgba(51, 51, 51, 0.65);
+}
+
+.limit-warning {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+  background-color: rgba(255, 77, 79, 0.12);
+  color: #a8071a;
+  font-size: 0.9rem;
+  display: none;
+}
+
+.limit-warning.is-visible {
+  display: block;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  font-weight: 600;
+  background: rgba(255, 204, 0, 0.3);
+  color: var(--color-accent);
+}
+
+.link-button {
+  border: none;
+  background: none;
+  color: var(--color-secondary);
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: rgba(51, 51, 51, 0.4);
+  transition: color 0.2s;
+}
+
+.link-button:hover,
+.link-button:focus-visible {
+  color: var(--color-accent);
+}
+
+.link-button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  text-decoration: none;
+}
+
+.ingredient-chips {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.ingredient-category-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.ingredient-category-title {
+  width: 100%;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid rgba(139, 69, 19, 0.2);
+  padding-bottom: 0.25rem;
+}
+
+/* Chip padrão: botão circular leve que pode ficar ativo/inativo */
+.ingredient-chip {
+  border: 1px solid rgba(51, 51, 51, 0.35);
+  background-color: var(--color-light);
+  border-radius: 999px;
+  padding: 0.45rem 1.1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  opacity: 1;
+}
+
+.ingredient-chip:hover,
+.ingredient-chip:focus-visible {
+  transform: translateY(-2px);
+  background-color: var(--color-secondary);
+  color: var(--color-light);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.ingredient-chip.is-locked {
+  background: rgba(0, 0, 0, 0.05);
+  color: rgba(0, 0, 0, 0.45);
+  border-style: dashed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Quando um ingrediente é incompatível, escondemos o chip suavemente */
+.ingredient-chip.is-hidden {
+  opacity: 0;
+  transform: scale(0.85);
+  pointer-events: none;
+}
+
+/* Efeito "não pode" ao tentar passar do limite de 3 ingredientes */
+.ingredient-chip.shake {
+  animation: chip-shake 0.6s ease;
+}
+
+@keyframes chip-shake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-4px); }
+  40% { transform: translateX(4px); }
+  60% { transform: translateX(-3px); }
+  80% { transform: translateX(3px); }
+  100% { transform: translateX(0); }
+}
+
+.ingredient-chip.active {
+  background: linear-gradient(135deg, var(--color-secondary), #000000);
+  color: var(--color-light);
+  border-color: transparent;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+.ingredient-chip.active::after {
+  content: '✓';
+  margin-left: 0.4rem;
+  font-size: 0.75rem;
+}
+
+/* Painel de sugestões baseado na seleção corrente */
+.suggestion-panel {
+  position: relative;
+  background-color: var(--color-light);
+  border-left: 4px solid var(--color-primary);
+  border-radius: 16px;
+  padding: 1.25rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+}
+
+.suggestion-panel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top left, rgba(255, 204, 0, 0.25), transparent 55%);
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.suggestion-panel > * {
+  position: relative;
+}
+
+.suggestion-panel.is-active {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(255, 204, 0, 0.2);
+}
+
+.suggestion-panel .selection-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.75rem 0 0.25rem;
+}
+
+.selection-pill {
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  background-color: rgba(255, 204, 0, 0.25);
+  font-size: 0.85rem;
+  color: var(--color-accent);
+  border: 1px solid rgba(255, 204, 0, 0.35);
+}
+
+.suggestion-panel ul {
+  margin-top: 0.5rem;
+  padding-left: 1.25rem;
+  color: #444;
+}
+
+.suggestion-panel li {
+  margin-bottom: 0.35rem;
+}
+
+.suggestion-panel strong {
+  color: var(--color-accent);
+}
+
+.mini-note {
+  font-size: 0.85rem;
+  color: rgba(0, 0, 0, 0.6);
+  margin-top: 0.5rem;
+}
+
+.menu-item.match {
+  outline: 3px solid var(--color-primary);
+  outline-offset: -3px;
+  box-shadow: 0 6px 30px rgba(255, 204, 0, 0.35);
+  --card-scale: 1.05;
+}
+
+.menu-item.match img {
+  height: 270px;
+}
+
+.menu-item.single-match {
+  --card-scale: 1.08;
+}
+
+.menu-item.single-match img {
+  height: auto;
+  aspect-ratio: 4 / 3;
+  max-height: 280px;
+  object-fit: contain;
+  padding: 0.5rem;
+  background: radial-gradient(circle at top, rgba(255, 255, 255, 0.85), rgba(255, 248, 214, 0.8));
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Grid responsivo que ajusta a quantidade de colunas conforme a largura disponível */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Cartão base de cada sanduíche: usa CSS custom props p/ animações sutis */
+.menu-item {
+  --card-scale: 1;
+  --card-translate: 0;
+  background-color: var(--color-light);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+  transform: translateY(var(--card-translate)) scale(var(--card-scale));
+}
+
+/* Hover do card altera a escala para dar sensação de clique */
+.menu-item:hover {
+  --card-translate: -5px;
+  --card-scale: 1.02;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  padding: 0;
+  background-color: transparent;
+  transition: height 0.3s ease, padding 0.3s ease;
+}
+
+.item-content {
+  padding: 1rem;
+}
+
+.item-content h3 {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-content .price {
+  font-size: 1rem;
+  color: var(--color-accent);
+  font-weight: 600;
+  margin-left: auto;
+}
+
+.item-content .tag {
+  font-size: 0.75rem;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  margin-left: 0.5rem;
+}
+
+.item-content p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #555;
+}
+
+.card-actions {
+  margin-top: 0.85rem;
+}
+
+/* Botão de WhatsApp presente dentro de cada card */
+.order-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background-color: var(--color-secondary);
+  color: var(--color-light);
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.order-button__icon {
+  width: 1.15rem;
+  height: 1.15rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.order-button__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.order-button__label {
+  line-height: 1;
+}
+
+.order-button::after {
+  content: '→';
+  font-size: 1rem;
+}
+
+.order-button:hover,
+.order-button:focus-visible {
+  background-color: var(--color-accent);
+  transform: translateY(-1px);
+}
+
+/* Contact section */
+/* Seção de contato serve como mini landing para CTA final */
+.contact-section {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.contact-section h2 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.contact-section p {
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+}
+
+.contact-section .hours {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+.contact-section .hours h3 {
+  font-family: var(--font-heading);
+  margin-bottom: 0.25rem;
+}
+
+/* Footer */
+.site-footer {
+  background-color: var(--color-secondary);
+  color: var(--color-light);
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: 0.9rem;
+}
+
+.site-footer .small {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+/* Responsive tweaks */
+/* Ajustes finos para telas pequenas: menor padding e navegação compacta */
+@media (max-width: 600px) {
+  .ingredient-filter {
+    padding: 1rem;
+  }
+
+  .filter-status {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo span {
+    display: none; /* Hide text on very small screens to save space */
+  }
+  .main-nav a {
+    margin-left: 0.75rem;
+    font-size: 0.9rem;
+  }
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+}

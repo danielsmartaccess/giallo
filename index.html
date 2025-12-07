@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Configuração básica de codificação e compatibilidade -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giallo Sanduicheria – Cardápio</title>
+  <!-- Metadados essenciais para SEO e redes sociais -->
+  <meta name="description" content="Conheça o cardápio completo da Giallo Sanduicheria. Paninis e sanduíches italianos irresistíveis, feitos com ingredientes frescos e de alta qualidade em Porto Alegre.">
+  <meta name="keywords" content="Giallo, sanduicheria, panini, sanduíche italiano, cardápio, Porto Alegre">
+  <meta name="author" content="Giallo Sanduicheria">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/logo1-Giallo_w-1.png">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Dados estruturados em JSON-LD para ajudar buscadores a entenderem o menu -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Giallo Sanduicheria",
+    "servesCuisine": "Sanduíches italianos",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Porto Alegre",
+      "addressCountry": "BR"
+    },
+    "url": "http://www.giallosanduicheria.com.br/",
+    "menu": [
+      {
+        "@type": "MenuItem",
+        "name": "Tradizionale",
+        "description": "Pão Ciabatta, presunto cozido, folhas de manjericão, nozes pecan, azeite de oliva extra virgem, queijo muçarela e a pasta de Dio.",
+        "image": "images/TRADIZIONALEw.jpg",
+        "offers": {"@type": "Offer", "price": "32", "priceCurrency": "BRL"}
+      },
+      {
+        "@type": "MenuItem",
+        "name": "Caprese",
+        "description": "Pão Ciabatta, queijo de búfala, tomate assado, manjericão, azeite extra virgem e a pasta de Dio.",
+        "image": "images/CAPRESEw.jpg",
+        "offers": {"@type": "Offer", "price": "38", "priceCurrency": "BRL"}
+      },
+      {
+        "@type": "MenuItem",
+        "name": "Buon",
+        "description": "Pão Ciabatta, mortadela Bologna Ceratti, tomate assado, folhas de rúculas, queijo colonial, azeite extra virgem e a pasta de Dio.",
+        "image": "images/BUONw.jpg",
+        "offers": {"@type": "Offer", "price": "36", "priceCurrency": "BRL"}
+      },
+      {
+        "@type": "MenuItem",
+        "name": "Speciale",
+        "description": "Pão Ciabatta, mortadela Bologna Ceratti, folhas de cebolas assadas, queijo muçarela, azeite de oliva extra virgem e a pasta de Dio.",
+        "image": "images/SPECIALEw.jpg",
+        "offers": {"@type": "Offer", "price": "33", "priceCurrency": "BRL"}
+      },
+      {
+        "@type": "MenuItem",
+        "name": "Bellissimo",
+        "description": "Pão Ciabatta, presunto Parma Italiano, folhas de rúcula, folhas de cebolas assadas, queijo colonial, azeite extra virgem e a pasta de Dio.",
+        "image": "images/BELLISSIMOw.jpg",
+        "offers": {"@type": "Offer", "price": "48", "priceCurrency": "BRL"}
+      },
+      {
+        "@type": "MenuItem",
+        "name": "Bravo",
+        "description": "Pão Ciabatta, presunto cozido, folhas de rúcula, pesto de manjericão e nozes, queijo provolone e a pasta de Dio.",
+        "image": "images/BRAVOw.jpg",
+        "offers": {"@type": "Offer", "price": "35", "priceCurrency": "BRL"}
+      },
+      {
+        "@type": "MenuItem",
+        "name": "Affamato",
+        "description": "Pão Ciabatta, mortadela Bologna Ceratti, tomate assado, nozes pecan, queijo muçarela, azeite extra virgem e a pasta de Dio.",
+        "image": "images/AFFAMATOw.jpg",
+        "offers": {"@type": "Offer", "price": "35", "priceCurrency": "BRL"}
+      },
+      {
+        "@type": "MenuItem",
+        "name": "Che Bello",
+        "description": "Pão Ciabatta, presunto Parma Italiano, folhas de rúculas, pesto de manjericão e nozes, queijo muçarela, mel e a pasta de Dio.",
+        "image": "images/CHE-BELLOw.jpg",
+        "offers": {"@type": "Offer", "price": "52", "priceCurrency": "BRL"}
+      },
+      {
+        "@type": "MenuItem",
+        "name": "Amore Mio",
+        "description": "Pão Ciabatta, presunto Parma Italiano, nozes pecan, tomate assado, queijo de búfala, azeite extra virgem e a pasta de Dio.",
+        "image": "images/AMORE-MIOw.jpg",
+        "offers": {"@type": "Offer", "price": "55", "priceCurrency": "BRL"}
+      },
+      {
+        "@type": "MenuItem",
+        "name": "Fame",
+        "description": "Pão Ciabatta, presunto cozido, tomate assado, queijo parmesão, azeite extra virgem e a pasta de Dio.",
+        "image": "images/FAMEw.jpg",
+        "offers": {"@type": "Offer", "price": "35", "priceCurrency": "BRL"}
+      },
+      {
+        "@type": "MenuItem",
+        "name": "Miscela",
+        "description": "Pão Ciabatta, pasta de Dio, folhas de manjericão, queijo parmesão, nozes pecan, folhas de cebolas assadas e azeite de oliva extra virgem.",
+        "image": "images/MISCELAw.jpg",
+        "offers": {"@type": "Offer", "price": "36", "priceCurrency": "BRL"}
+      },
+      {
+        "@type": "MenuItem",
+        "name": "Verdure",
+        "description": "Pão Ciabatta, pasta de Dio, folhas de manjericão, tomate assado, folhas de cebolas assadas e azeite extra virgem.",
+        "image": "images/VERDUREw.jpg",
+        "offers": {"@type": "Offer", "price": "30", "priceCurrency": "BRL"}
+      },
+      {
+        "@type": "MenuItem",
+        "name": "Asurdo",
+        "description": "Pão Ciabatta, Pastrami de gado, picles de pepino, queijo colonial, azeite extra virgem e a pasta de Dio.",
+        "image": "images/ASURDOw.jpg",
+        "offers": {"@type": "Offer", "price": "55", "priceCurrency": "BRL"}
+      },
+      {
+        "@type": "MenuItem",
+        "name": "Fico",
+        "description": "Pão Ciabatta, presunto Parma Italiano, pesto de pistache, figo em calda, queijo colonial e a pasta de Dio.",
+        "image": "images/FICOw.jpg",
+        "offers": {"@type": "Offer", "price": "52", "priceCurrency": "BRL"}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Cabeçalho fixo com logo e navegação principal -->
+  <header class="site-header">
+    <div class="container header-content">
+      <div class="logo">
+        <img src="images/logo1-Giallo_w-1.png" alt="Logo da Giallo Sanduicheria">
+        <span>Giallo Sanduicheria</span>
+      </div>
+      <nav class="main-nav">
+        <a href="#hero">Início</a>
+        <a href="#menu">Cardápio</a>
+        <a href="#contact">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+  <!-- Hero section: primeira dobra com promessa de valor -->
+    <section id="hero" class="hero-section">
+      <div class="container">
+        <h1>O tradicional sanduíche italiano</h1>
+        <p>Nosso cardápio foi pensado para transportar você às ruelas da Itália. Todos os nossos paninis são preparados com ingredientes frescos e de alta qualidade.</p>
+        <a href="#menu" class="cta-button">Ver Cardápio</a>
+      </div>
+    </section>
+
+    <!-- Menu section: filtros inteligentes + cards de produtos -->
+    <section id="menu" class="menu-section">
+      <div class="container">
+        <h2>Sanduíches</h2>
+        <p class="subtitle">Descubra o verdadeiro sabor da Itália!</p>
+        <!-- Bloco de filtros por ingrediente: texto de apoio + status + chips interativos -->
+        <section class="ingredient-filter" aria-labelledby="ingredient-filter-title">
+          <div class="filter-copy">
+            <h3 id="ingredient-filter-title">Escolha seu sanduíche pelo sabor</h3>
+            <p>Selecione ingredientes preferidos e nós mostramos os sanduíches que combinam com você.</p>
+          </div>
+          <div class="filter-status" aria-live="polite">
+            <div>
+              <span id="filter-count" class="status-pill">Nenhum ingrediente selecionado</span>
+              <small>Combine até 3 ingredientes para sugestões mais precisas.</small>
+            </div>
+            <button id="clear-filters" type="button" class="link-button" aria-label="Limpar ingredientes selecionados">Limpar</button>
+          </div>
+          <!-- Aviso dinâmico exibido quando o usuário ultrapassa o limite de chips -->
+          <p id="limit-warning" class="limit-warning" role="alert">Você só pode combinar até três ingredientes por vez.</p>
+          <!-- Lista dinâmica de chips gerada via JavaScript -->
+          <div id="ingredient-filters" class="ingredient-chips" role="listbox" aria-label="Filtros de ingredientes"></div>
+        </section>
+
+        <!-- Painel de sugestões atualiza conforme seleção de ingredientes -->
+        <section id="ingredient-suggestions" class="suggestion-panel" aria-live="polite">
+          <p>Selecione um ingrediente para receber sugestões personalizadas.</p>
+        </section>
+        <!-- Grade responsiva com todos os sanduíches disponíveis -->
+        <div class="menu-grid">
+          <!-- Cada .menu-item representa um card independente do cardápio -->
+          <article class="menu-item" data-name="tradizionale">
+            <img src="images/TRADIZIONALEw.jpg" alt="Sanduíche Tradizionale">
+            <div class="item-content">
+              <h3>Tradizionale<span class="price">R$ 32</span></h3>
+              <p>Pão Ciabatta, presunto cozido, folhas de manjericão, nozes pecan, azeite de oliva extra virgem, queijo muçarela e a pasta de Dio.</p>
+            </div>
+          </article>
+
+          <!-- Use a classe .vegetariano para estilizar ou filtrar opções sem carne -->
+          <article class="menu-item vegetariano" data-name="caprese">
+            <img src="images/CAPRESEw.jpg" alt="Sanduíche Caprese">
+            <div class="item-content">
+              <h3>Caprese <span class="price">R$ 38</span> <span class="tag">Vegetariano</span></h3>
+              <p>Pão Ciabatta, queijo de búfala, tomate assado, manjericão, azeite extra virgem e a pasta de Dio.</p>
+            </div>
+          </article>
+
+          <article class="menu-item" data-name="buon">
+            <img src="images/BUONw.jpg" alt="Sanduíche Buon">
+            <div class="item-content">
+              <h3>Buon <span class="price">R$ 36</span></h3>
+              <p>Pão Ciabatta, mortadela Bologna Ceratti, tomate assado, folhas de rúculas, queijo colonial, azeite extra virgem e a pasta de Dio.</p>
+            </div>
+          </article>
+
+          <article class="menu-item" data-name="speciale">
+            <img src="images/SPECIALEw.jpg" alt="Sanduíche Speciale">
+            <div class="item-content">
+              <h3>Speciale <span class="price">R$ 33</span></h3>
+              <p>Pão Ciabatta, mortadela Bologna Ceratti, folhas de cebolas assadas, queijo muçarela, azeite de oliva extra virgem e a pasta de Dio.</p>
+            </div>
+          </article>
+
+          <article class="menu-item" data-name="bellissimo">
+            <img src="images/BELLISSIMOw.jpg" alt="Sanduíche Bellissimo">
+            <div class="item-content">
+              <h3>Bellissimo <span class="price">R$ 48</span></h3>
+              <p>Pão Ciabatta, presunto Parma Italiano, folhas de rúcula, folhas de cebolas assadas, queijo colonial, azeite extra virgem e a pasta de Dio.</p>
+            </div>
+          </article>
+
+          <article class="menu-item" data-name="bravo">
+            <img src="images/BRAVOw.jpg" alt="Sanduíche Bravo">
+            <div class="item-content">
+              <h3>Bravo <span class="price">R$ 35</span></h3>
+              <p>Pão Ciabatta, presunto cozido, folhas de rúcula, pesto de manjericão e nozes, queijo provolone e a pasta de Dio.</p>
+            </div>
+          </article>
+
+          <article class="menu-item" data-name="affamato">
+            <img src="images/AFFAMATOw.jpg" alt="Sanduíche Affamato">
+            <div class="item-content">
+              <h3>Affamato <span class="price">R$ 35</span></h3>
+              <p>Pão Ciabatta, mortadela Bologna Ceratti, tomate assado, nozes pecan, queijo muçarela, azeite extra virgem e a pasta de Dio.</p>
+            </div>
+          </article>
+
+          <article class="menu-item" data-name="che-bello">
+            <img src="images/CHE-BELLOw.jpg" alt="Sanduíche Che Bello">
+            <div class="item-content">
+              <h3>Che Bello <span class="price">R$ 52</span></h3>
+              <p>Pão Ciabatta, presunto Parma Italiano, folhas de rúculas, pesto de manjericão e nozes, queijo muçarela, mel e a pasta de Dio.</p>
+            </div>
+          </article>
+
+          <article class="menu-item" data-name="amore-mio">
+            <img src="images/AMORE-MIOw.jpg" alt="Sanduíche Amore Mio">
+            <div class="item-content">
+              <h3>Amore Mio <span class="price">R$ 55</span></h3>
+              <p>Pão Ciabatta, presunto Parma Italiano, nozes pecan, tomate assado, queijo de búfala, azeite extra virgem e a pasta de Dio.</p>
+            </div>
+          </article>
+
+          <article class="menu-item" data-name="fame">
+            <img src="images/FAMEw.jpg" alt="Sanduíche Fame">
+            <div class="item-content">
+              <h3>Fame <span class="price">R$ 35</span></h3>
+              <p>Pão Ciabatta, presunto cozido, tomate assado, queijo parmesão, azeite extra virgem e a pasta de Dio.</p>
+            </div>
+          </article>
+
+          <article class="menu-item vegetariano" data-name="miscela">
+            <img src="images/MISCELAw.jpg" alt="Sanduíche Miscela">
+            <div class="item-content">
+              <h3>Miscela <span class="price">R$ 36</span> <span class="tag">Vegetariano</span></h3>
+              <p>Pão Ciabatta, pasta de Dio, folhas de manjericão, queijo parmesão, nozes pecan, folhas de cebolas assadas e azeite de oliva extra virgem.</p>
+            </div>
+          </article>
+
+          <article class="menu-item vegetariano" data-name="verdure">
+            <img src="images/VERDUREw.jpg" alt="Sanduíche Verdure">
+            <div class="item-content">
+              <h3>Verdure <span class="price">R$ 30</span> <span class="tag">Vegetariano</span></h3>
+              <p>Pão Ciabatta, pasta de Dio, folhas de manjericão, tomate assado, folhas de cebolas assadas e azeite extra virgem.</p>
+            </div>
+          </article>
+
+          <!-- Exemplos finais seguem o mesmo padrão: imagem, descrição e preço -->
+          <article class="menu-item" data-name="asurdo">
+            <img src="images/ASURDOw.jpg" alt="Sanduíche Asurdo">
+            <div class="item-content">
+              <h3>Asurdo <span class="price">R$ 55</span> <span class="tag">Sazonal</span></h3>
+              <p>Pão Ciabatta, pastrami de gado, picles de pepino, queijo colonial, azeite extra virgem e a pasta de Dio.</p>
+            </div>
+          </article>
+
+          <article class="menu-item" data-name="fico">
+            <img src="images/FICOw.jpg" alt="Sanduíche Fico">
+            <div class="item-content">
+              <h3>Fico <span class="price">R$ 52</span></h3>
+              <p>Pão Ciabatta, presunto Parma Italiano, pesto de pistache, figo em calda, queijo colonial e a pasta de Dio.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  <!-- Contact / Call to action section: incentiva o pedido pelo WhatsApp -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <h2>Faça seu pedido</h2>
+        <p>Estamos a um clique da felicidade! Peça sua tele‑entrega ou prepare‑se para retirar na loja.</p>
+        <a class="cta-button" href="https://api.whatsapp.com/send?phone=5551999999999&amp;text=Olá,%20gostaria%20de%20fazer%20um%20pedido" target="_blank" rel="noopener">Pedir pelo WhatsApp</a>
+        <div class="hours">
+          <h3>Horário de atendimento</h3>
+          <p>Segunda à sexta: 10h às 20h</p>
+          <p>Sábado: 10h às 19h</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé com créditos e dados legais -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Giallo Sanduicheria. Todos os direitos reservados.</p>
+      <p class="small">RCC comércio de Alimentos CNPJ 53.183.780/0001‑19</p>
+    </div>
+  </footer>
+
+  <!-- Bundle de scripts responsável pelos filtros e integrações -->
+  <script src="js/script.js"></script>
+</body>
+</html>
